@@ -1,0 +1,43 @@
+<div class="container-card-info">
+  <div class="card-info">
+    <div>
+      <h3>Exchange rate now</h3>
+      <span>09/03/2022 - 15:09</span>
+    </div>
+    <div>
+      <h1>USD/BRL</h1>
+    </div>
+  </div>
+  <div class="value-currency">R$ 5,00</div>
+
+  <mat-accordion >
+    <mat-expansion-panel
+      hideToggle
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false"
+      class="expansion-panel"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <h3>LAST 30 DAYS</h3>
+        </mat-panel-title>
+        <mat-icon
+          aria-hidden="false"
+          [fontIcon]="!panelOpenState ? 'add' : 'remove'"
+          *ngIf="!panelOpenState"
+          class="custom-icon-color"
+        ></mat-icon>
+
+        <mat-icon
+          aria-hidden="false"
+          [fontIcon]="panelOpenState ? 'remove' : 'add'"
+          *ngIf="panelOpenState"
+          class="custom-icon-color"
+        ></mat-icon>
+
+      </mat-expansion-panel-header>
+
+      <div class="card-expansion-panel"><app-exchange-rate-card></app-exchange-rate-card></div>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>

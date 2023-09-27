@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./theme";
+
+$color-blue: rgba(7, 176, 251, 1);
+
+html,
+body {
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+h1 {
+  font-size: 24px;
+  color: $color-blue;
+  font-weight: 500 !important;
+}
+h3 {
+  font-size: 18px;
+  font-weight: 500 !important;
+  margin: 0 !important;
+}
+button {
+  background-color: $color-blue !important;
+}
