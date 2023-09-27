@@ -1,3 +1,25 @@
 .example-card {
   margin-bottom: 8px;
+  display: flex;
+  text-align: initial;
+  padding: 15px 10px;
+}
+.card-info {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+
+  div div{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 10px;
+  }
+
+}
+
+.close-dif{
+  display: flex;
+  align-items: baseline;
+  gap: 15px;
 }

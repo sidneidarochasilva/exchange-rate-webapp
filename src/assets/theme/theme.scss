@@ -1,0 +1,16 @@
+
+@import './../../../node_modules/@angular/material/theming';
+
+
+// Defina sua cor personalizada como cor primária
+$my-primary: mat-palette($mat-blue, 700, 300, 900);
+
+// Defina outras cores personalizadas, se necessário
+$my-accent: mat-palette($mat-amber);
+$my-warn: mat-palette($mat-red);
+
+// Crie um tema personalizado com as cores definidas
+$my-theme: mat-light-theme($my-primary, $my-accent, $my-warn);
+
+// Aplique o tema ao Angular Material
+@include angular-material-theme($my-theme);

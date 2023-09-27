@@ -2,13 +2,13 @@
   <div class="card-info">
     <div>
       <h3>Exchange rate now</h3>
-      <span>09/03/2022 - 15:09</span>
+      <span>{{exchangeRate?.lastUpdatedAt | date:'dd/MM/yyyy HH:mm:ss'}}</span>
     </div>
     <div>
-      <h1>USD/BRL</h1>
+      <h1>{{exchangeRate?.fromSymbol}}/BRL</h1>
     </div>
   </div>
-  <div class="value-currency">R$ 5,00</div>
+  <div class="value-currency">R$ {{exchangeRate?.exchangeRate | decimalConvert: 2}}</div>
 
   <mat-accordion >
     <mat-expansion-panel
@@ -37,7 +37,13 @@
 
       </mat-expansion-panel-header>
 
-      <div class="card-expansion-panel"><app-exchange-rate-card></app-exchange-rate-card></div>
+      <div class="card-expansion-panel">
+        <div *ngFor="let card of listExchangeRate">
+          <app-exchange-rate-card
+          [cardExchangeRate]="card"
+          ></app-exchange-rate-card>
+        </div>
+      </div>
     </mat-expansion-panel>
   </mat-accordion>
 </div>

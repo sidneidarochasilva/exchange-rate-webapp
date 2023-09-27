@@ -1,27 +1,39 @@
-# ExchangeRateWebapp
+## EXCHANGE-RATE-WEBAPP - Aplicação Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.0.
+Este webapp simples permite que os usuários verifiquem a taxa de câmbio do real brasileiro (BRL) em relação a outras moedas. A aplicação foi desenvolvida usando Angular 15.
 
-## Development server
+# Funcionalidades
+O usuário pode digitar um código de moeda (por exemplo, USD, EUR, GBP, JPY, CAD).
+A aplicação exibe a taxa de câmbio atual para a moeda especificada.
+Os usuários têm a opção de verificar a taxa de câmbio dos últimos 30 dias.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+# Configuração
 
-## Code scaffolding
+npm install
+Execute o aplicativo:
+ng serve
+Acesse o aplicativo:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Abra seu navegador e acesse http://localhost:4200/.
 
-## Build
+# Requisitos
+Node.js e npm devem estar instalados na sua máquina.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Angular CLI deve estar instalado globalmente. Você pode instalar o Angular CLI com o seguinte comando:
 
-## Running unit tests
+bash
+Copy code
+npm install -g @angular/cli
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+# Tecnologias Utilizadas
+Angular 15
+Material Angular
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# Estrutura do Projeto
+src/app/components: Contém os componentes globais da aplicação.
+src/app/modules: Contém as features do sistema.
+src/app/services: Contém os serviços responsáveis por fazer as chamadas à API.
+src/assets: Contém arquivos estáticos como imagens.
+src/shared: Contém arquivos para uso em toda aplicação exemplo pipes.
